@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Wisani Maluleke | Software & DevOps Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Wisani Maluleke - Full-stack Software Developer & DevOps Specialist" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0b0f19;
+      --bg-card: #111827;
+      --bg-card-hover: #1f2937;
+      --accent-cyan: #06b6d4;
+      --accent-purple: #8b5cf6;
+      --accent-green: #10b981;
+      --text-main: #f3f4f6;
+      --text-white: #9ca3af;
+      --border-color: #1f2937;
+      --font-mono: 'Fira Code', monospace;
+      --font-sans: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+    }
+
+    /* Custom Tech Typography & Accents */
+    .font-mono {
+      font-family: var(--font-mono);
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Modern Glassmorphic Header & Sidebar */
+    .tech-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      transition: all 0.25s ease-in-out;
+    }
+
+    .tech-card:hover {
+      border-color: var(--accent-cyan);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(6, 182, 212, 0.1);
+    }
+
+    .badge-tech {
+      background: rgba(17, 24, 39, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--accent-cyan);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 0.35em 0.65em;
+      border-radius: 6px;
+    }
+
+    /* Terminal Code Header Simulation */
+    .terminal-box {
+      background: #030712;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+    }
+
+    .terminal-dot {
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: var(--accent-cyan);
+      margin-top: 8px;
+      border-radius: 2px;
+    }
+
+    .btn-gradient {
+      background: linear-gradient(135deg, #0891b2, #7c3aed);
+      color: #fff;
+      border: none;
+      font-weight: 600;
+    }
+
+    .btn-gradient:hover {
+      opacity: 0.9;
+      color: #fff;
+    }
+
+    /* Status Indicator */
+    .status-ping {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--accent-green);
+      box-shadow: 0 0 8px var(--accent-green);
+      margin-right: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg border-bottom border-dark py-3 sticky-top"
+    style="background: rgba(11, 15, 25, 0.9); backdrop-filter: blur(10px);">
+    <div class="container">
+      <a class="navbar-brand font-mono text-white fw-bold" href="#">
+        <span class="text-gradient">&lt;Wisani.Dev /&gt;</span>
+      </a>
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto font-mono small">
+          <li class="nav-item"><a class="nav-link text-white me-3" href="#about">// About</a></li>
+          <li class="nav-item"><a class="nav-link text-white me-3" href="#skills">// Skills</a></li>
+          <li class="nav-item"><a class="nav-link text-white me-3" href="#projects">// Projects</a></li>
+          <li class="nav-item"><a class="nav-link text-white me-3" href="#experience">// Experience</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#contact">// Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <div class="row g-5">
+
+      <div class="col-lg-4">
+        <div class="tech-card p-4 text-center sticky-lg-top" style="top: 100px; z-index: 10;">
+          <div class="position-relative d-inline-block mb-3">
+            <img class="rounded-circle img-fluid border border-2 border-cyan p-1" src="assets/img/profiles.jpg"
+              alt="Wisani Maluleke" style="width: 150px; height: 150px; object-fit: cover;">
+            <span
+              class="position-absolute bottom-0 end-0 badge rounded-pill bg-dark border border-secondary text-light font-mono small">
+              <span class="status-ping"></span> Partially Available
+            </span>
+          </div>
+
+          <h2 class="h4 fw-bold mb-1 text-white">Wisani Maluleke</h2>
+          <p class="font-mono text-white small mb-3">Software & DevOps Engineer</p>
+
+          <p class="small text-white mb-4">
+            Specializing in high-availability full-stack Web and Desktop systems, Linux server administration, and responsive UI engineering.
+          </p>
+
+          <div class="terminal-box text-start mb-4">
+            <div class="mb-2">
+              <span class="terminal-dot bg-danger me-1"></span>
+              <span class="terminal-dot bg-warning me-1"></span>
+              <span class="terminal-dot bg-success"></span>
+            </div>
+            <div class="text-white">// Current Stack</div>
+            <div class="text-white"><span class="text-gradient">&gt;</span> PHP, Laravel, Java, Spring Boot</div>
+            <div class="text-white"><span class="text-gradient">&gt;</span> Vue 3, Angular, React</div>
+            <div class="text-white"><span class="text-gradient">&gt;</span> Docker, Grafana, MySQL, Redis, MongoDB, PostgreSQL</div>
+          </div>
+
+          <div class="d-flex justify-content-center gap-2 mb-4">
+            <a href="https://github.com/WisaniMaluleke" target="_blank"
+              class="btn btn-outline-light btn-sm rounded-circle"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/wisani-liberation-maluleke-a34663136" target="_blank"
+              class="btn btn-outline-light btn-sm rounded-circle"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:wislim.aj@gmail.com" class="btn btn-outline-light btn-sm rounded-circle"><i
+                class="fas fa-envelope"></i></a>
+          </div>
+
+          <a href="#contact" class="btn btn-gradient w-100 mb-2">Hire / Collaborate</a>
+          <a href="#" class="btn btn-outline-secondary btn-sm w-100 text-light border-0"><i
+              class="fas fa-download me-1"></i> Resume.pdf</a>
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+
+        <section id="about" class="mb-5">
+          <span class="font-mono text-gradient small font-weight-bold">// OVERVIEW</span>
+          <h1 class="display-6 fw-bold text-white mb-3">Architecting resilient backend platforms & engaging user
+            interfaces.</h1>
+          <p class="text-white leading-relaxed">
+            Software & DevOps Engineer with 6+ years of enterprise experience engineering SLA-backed web applications across.
+            Hands-on expertise in PHP, Laravel, Angular, Java, and database optimization, Frontend, Backend development, and DevOps practices,
+            with a current focus on exploring event-driven microservices architectures across multiple language runtimes
+            (RabbitMQ, Redis, Spring Boot, .NET Core).
+          </p>
+
+          <div class="row g-3 mt-2">
+            <div class="col-sm-4">
+              <div class="tech-card p-3 text-center">
+                <h3 class="fw-bold text-white mb-0 font-mono">7+</h3>
+                <span class="small text-white">Years Experience</span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="tech-card p-3 text-center">
+                <h3 class="fw-bold text-white mb-0 font-mono">2</h3>
+                <span class="small text-white">Core Runtimes</span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="tech-card p-3 text-center">
+                <h3 class="fw-bold text-white mb-0 font-mono">10+</h3>
+                <span class="small text-white">Projects Built</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" class="mb-5">
+          <span class="font-mono text-gradient small">// CAPABILITIES</span>
+          <h2 class="section-title text-white">Skills & Technologies</h2>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="tech-card p-4 h-100">
+                <h5 class="text-white font-mono mb-3"><i class="fas fa-layer-group text-info me-2"></i> Frontend</h5>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge-tech">Angular</span>
+                  <span class="badge-tech">Vue.js / shadcn</span>
+                  <span class="badge-tech">React / Next.js</span>
+                  <span class="badge-tech">Bootstrap</span>
+                  <span class="badge-tech">TypeScript</span>
+                  <span class="badge-tech">Tailwind CSS</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="tech-card p-4 h-100">
+                <h5 class="text-white font-mono mb-3"><i class="fas fa-server text-warning me-2"></i> Backend & Queues
+                </h5>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge-tech">PHP (Laravel)</span>
+                  <span class="badge-tech">Java (Spring Boot)</span>
+                  <span class="badge-tech">Redis Caching</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="tech-card p-4 h-100">
+                <h5 class="text-white font-mono mb-3"><i class="fas fa-cubes text-success me-2"></i> DevOps & Cloud</h5>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge-tech">Docker / Compose</span>
+                  <span class="badge-tech">Linux (VPS/Ubuntu)</span>
+                  <span class="badge-tech">Nginx Reverse Proxy</span>
+                  <span class="badge-tech">SSL / Certbot</span>
+                  <span class="badge-tech">UFW Firewall</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="tech-card p-4 h-100">
+                <h5 class="text-white font-mono mb-3"><i class="fas fa-database text-danger me-2"></i> Databases & Tools
+                </h5>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge-tech">MySQL / MariaDB</span>
+                  <span class="badge-tech">Git / Bitbucket</span>
+                  <span class="badge-tech">RESTful APIs</span>
+                  <span class="badge-tech">Figma to Code</span>
+                  <span class="badge-tech">PostgreSQL</span>
+                  <span class="badge-tech">MongoDB</span>
+                  <span class="badge-tech">SSH</span>
+                </div>
+              </div>                                                                      
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="mb-5">
+          <span class="font-mono text-gradient small">// PORTFOLIO</span>
+          <h2 class="section-title text-white">Featured Architecture & Apps</h2>
+
+          <div class="d-flex flex-column gap-4">
+
+            <div class="tech-card p-4 position-relative border-start border-4 border-info">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h3 class="h4 text-white font-mono mb-0">BeastStack Platform</h3>
+                <span class="badge bg-dark text-info border border-info font-mono">Microservices</span>
+              </div>
+              <p class="text-white small">
+                High-throughput, event-driven polyglot architecture built for asynchronous order processing across five
+                language runtimes.
+              </p>
+              <ul class="text-white small ps-3 mb-3">
+                <li>Laravel API Gateway handling high-concurrency request routing and dispatching queue events.</li>
+                <li>RabbitMQ message broker facilitating decoupling across Java, Python, C#, and Node.js microservices.
+                </li>
+                <li>Centralized Redis caching layer for state synchronization and quick database read offloading.</li>
+              </ul>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="badge-tech">Laravel</span>
+                <span class="badge-tech">Spring Boot</span>
+                <span class="badge-tech">Python</span>
+                <span class="badge-tech">.NET Core</span>
+                <span class="badge-tech">RabbitMQ</span>
+                <span class="badge-tech">Redis</span>
+              </div>
+              <a href="https://github.com/WisaniMaluleke" target="_blank"
+                class="btn btn-outline-light btn-sm font-mono"><i class="fab fa-github me-1"></i> Architecture Repo</a>
+            </div>
+
+            <div class="tech-card p-4 border-start border-4 border-purple">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h3 class="h4 text-white font-mono mb-0">Agrimart Platform</h3>
+                <span class="badge bg-dark text-warning border border-warning font-mono">E-Commerce</span>
+              </div>
+              <p class="text-white small">
+                Agricultural marketplace solution built for optimal mobile access and high-scale vendor product display.
+              </p>
+              <ul class="text-white small ps-3 mb-3">
+                <li>Engineered scalable Angular components for mobile navigation, headers, and dynamic filtering grids.
+                </li>
+                <li>Integrated client-side state handling for seamless product discovery and catalog queries.</li>
+              </ul>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="badge-tech">Angular</span>
+                <span class="badge-tech">TypeScript</span>
+                <span class="badge-tech">RxJS</span>
+                <span class="badge-tech">Bootstrap</span>
+              </div>
+              <a href="https://github.com/WisaniMaluleke" target="_blank"
+                class="btn btn-outline-light btn-sm font-mono"><i class="fab fa-github me-1"></i> View Code</a>
+            </div>
+
+            <div class="tech-card p-4 border-start border-4 border-success">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h3 class="h4 text-white font-mono mb-0">Outsource Spani</h3>
+                <span class="badge bg-dark text-success border border-success font-mono">Platform</span>
+              </div>
+              <p class="text-white small">
+                Service procurement marketplace enabling verified local skills matching and job bookings.
+              </p>
+              <ul class="text-white small ps-3 mb-3">
+                <li>Architected robust user authentication modules and route guards in Angular.</li>
+                <li>Migrated key workflows from legacy React components into clean, modular Angular structures.</li>
+              </ul>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="badge-tech">Angular</span>
+                <span class="badge-tech">REST API</span>
+                <span class="badge-tech">Authentication</span>
+              </div>
+              <a href="https://github.com/WisaniMaluleke" target="_blank"
+                class="btn btn-outline-light btn-sm font-mono"><i class="fab fa-github me-1"></i> View Code</a>
+            </div>
+
+          </div>
+        </section>
+        <!-- Professional Timeline / Experience -->
+        <section id="experience" class="mb-5">
+          <span class="font-mono text-gradient small font-weight-bold">// CAREER PATH</span>
+          <h2 class="section-title text-white">Professional Experience</h2>
+
+          <div class="border-start border-secondary ms-2 ps-4 d-flex flex-column gap-5">
+
+            <!-- IQBusiness -->
+            <div class="position-relative">
+              <i class="fas fa-circle text-info position-absolute"
+                style="left: -31px; top: 4px; font-size: 0.75rem;"></i>
+              <div class="d-flex justify-content-between align-items-start flex-wrap mb-1">
+                <h3 class="h4 text-white font-mono mb-0">IQBusiness</h3>
+                <span class="badge bg-dark text-info border border-info font-mono">Jan 2020 – Present</span>
+              </div>
+              <div class="text-gradient font-mono small mb-3">Intermediate Software Developer · Full-time | South Africa
+              </div>
+
+              <ul class="text-white small ps-3 mb-3 d-flex flex-column gap-2">
+                <li>Architect and maintain high-performance full-stack web solutions under strict Service Level
+                  Agreements (SLAs), consistently meeting alignment targets across cross-functional business units.</li>
+                <li>Collaborate deeply within mature Agile teams alongside Business Analysts and Quality Assurance
+                  engineers to groom user stories, estimate sprint efforts, and run technical feature demonstrations for
+                  stakeholders.</li>
+                <li>Enhance code reliability, security, and maintainability across core products by enforcing strict
+                  static analysis testing.</li>
+                <li>Manage, optimize, and migrate production-level MySQL databases using Laravel Artisan and MySQL
+                  Workbench to eliminate query bottlenecks.</li>
+                <li>Maintain staging servers on Linux via SSH, configuring firewalls, managing system workflows, and
+                  scripting deployment processes.</li>
+                <li>Upskilled and trained two junior software developers, fast-tracking their onboarding process
+                  regarding browser DevTools, debugging strategies, and Git collaboration best practices.</li>
+              </ul>
+
+              <div class="d-flex flex-wrap gap-1">
+                <span class="badge-tech">Laravel</span>
+                <span class="badge-tech">JavaScript</span>
+                <span class="badge-tech">MySQL</span>
+                <span class="badge-tech">Linux / SSH</span>
+                <span class="badge-tech">Static Analysis</span>
+                <span class="badge-tech">Agile / Scrum</span>
+                <span class="badge-tech">Mentorship</span>
+              </div>
+            </div>
+
+            <!-- Redivision Consulting Group -->
+            <div class="position-relative">
+              <i class="fas fa-circle text-purple position-absolute"
+                style="left: -31px; top: 4px; font-size: 0.75rem; color: var(--accent-purple);"></i>
+              <div class="d-flex justify-content-between align-items-start flex-wrap mb-1">
+                <h3 class="h4 text-white font-mono mb-0">Redivision Consulting Group</h3>
+                <span class="badge bg-dark text-white border border-secondary font-mono">Aug 2018 – Dec 2019</span>
+              </div>
+              <div class="text-white font-mono small mb-3">Full Stack Software Developer | Johannesburg, South Africa
+              </div>
+
+              <ul class="text-white small ps-3 mb-3 d-flex flex-column gap-2">
+                <li><strong>Procurement System (Laravel):</strong> Owned full development lifecycle from architectural
+                  design and database modeling to deployment. Implemented RBAC middleware, dynamic PDF reporting using
+                  FPDF, and real-time user notification engines.</li>
+                <li><strong>Accommodation Booking System:</strong> Debugged, refactored, and optimized an existing
+                  application to significantly improve page response times. Integrated PayFast payment gateway for
+                  secure transactions and established isolated testing environments to decouple staging from production.
+                </li>
+                <li><strong>Vehicle Finance Application:</strong> Developed and exposed secure Laravel RESTful APIs to
+                  feed a companion Android application, driving seamless client mobile integration.</li>
+                <li>Delivered high-impact technical demonstrations directly to clients, translating software
+                  capabilities into tangible business value.</li>
+              </ul>
+
+              <div class="d-flex flex-wrap gap-1">
+                <span class="badge-tech">Laravel</span>
+                <span class="badge-tech">PayFast Integration</span>
+                <span class="badge-tech">RESTful APIs</span>
+                <span class="badge-tech">RBAC</span>
+                <span class="badge-tech">FPDF</span>
+                <span class="badge-tech">MySQL</span>
+              </div>
+            </div>
+
+            <!-- MPANDE TECHNOLOGIES -->
+            <div class="position-relative">
+              <i class="fas fa-circle text-white position-absolute"
+                style="left: -31px; top: 4px; font-size: 0.75rem;"></i>
+              <div class="d-flex justify-content-between align-items-start flex-wrap mb-1">
+                <h3 class="h4 text-white font-mono mb-0">MPANDE TECHNOLOGIES</h3>
+                <span class="badge bg-dark text-white border border-secondary font-mono">Sep 2017 – Aug 2018</span>
+              </div>
+              <div class="text-white font-mono small mb-3">Software Developer (Client: Ulwembu Business Services) ·
+                Internship | Johannesburg</div>
+
+              <ul class="text-white small ps-3 mb-3 d-flex flex-column gap-2">
+                <li><strong>Fingerprint Biometrics & Health System:</strong> Researched, designed, and built a custom
+                  Java desktop application (Swing/AWT) interfacing directly with biometric hardware scanners to
+                  facilitate high-speed patient registration and search.</li>
+                <li>Integrated localized biometric desktop engine with secure cloud-based web APIs to enable real-time
+                  verification across multiple public health clinics.</li>
+                <li><strong>Asset Management System:</strong> Administered and tracked corporate hardware infrastructure
+                  assets while introducing optimized components to the core company website.</li>
+              </ul>
+
+              <div class="d-flex flex-wrap gap-1">
+                <span class="badge-tech">Java (Swing/AWT)</span>
+                <span class="badge-tech">Biometric Hardware SDK</span>
+                <span class="badge-tech">REST APIs Integration</span>
+                <span class="badge-tech">Hardware Admin</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section id="contact" class="mb-5">
+          <div class="tech-card p-4 p-md-5">
+            <span class="font-mono text-gradient small">// CONNECT</span>
+            <h2 class="h3 text-white font-mono mb-3">Let's build something great</h2>
+            <p class="text-white small mb-4">
+              Have a web application, website and mobile application POC, or contract project you need delivered? Send a
+              direct message.
+            </p>
+
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input type="text" class="form-control bg-dark border-secondary text-white font-mono small"
+                    placeholder="Your Name">
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control bg-dark border-secondary text-white font-mono small"
+                    placeholder="Your Email">
+                </div>
+                <div class="col-12">
+                  <input type="text" class="form-control bg-dark border-secondary text-white font-mono small"
+                    placeholder="Subject / Project Type">
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control bg-dark border-secondary text-white font-mono small" rows="4"
+                    placeholder="Briefly describe project details or goals..."></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-gradient font-mono w-100 py-2">
+                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="border-top border-dark py-4 text-center text-white font-mono small">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Wisani Maluleke. Engine powered by clean code & coffee.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
