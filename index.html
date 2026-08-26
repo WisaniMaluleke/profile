@@ -165,8 +165,9 @@
       <div class="col-lg-4">
         <div class="tech-card p-4 text-center sticky-lg-top" style="top: 100px; z-index: 10;">
           <div class="position-relative d-inline-block mb-3">
-            <img class="rounded-circle img-fluid border border-2 border-cyan p-1" src="https://wisanimaluleke.github.io/profile/assets/img/profiles.jpg"
-              alt="Wisani Maluleke" style="width: 150px; height: 150px; object-fit: cover;">
+            <img class="rounded-circle img-fluid border border-2 border-cyan p-1"
+              src="https://wisanimaluleke.github.io/profile/assets/img/profiles.jpg" alt="Wisani Maluleke"
+              style="width: 150px; height: 150px; object-fit: cover;">
             <span
               class="position-absolute bottom-0 end-0 badge rounded-pill bg-dark border border-secondary text-light font-mono small">
               <span class="status-ping"></span> Partially Available
@@ -177,7 +178,8 @@
           <p class="font-mono text-white small mb-3">Software & DevOps Engineer</p>
 
           <p class="small text-white mb-4">
-            Specializing in high-availability full-stack Web and Desktop systems, Linux server administration, and responsive UI engineering.
+            Specializing in high-availability full-stack Web and Desktop systems, Linux server administration, and
+            responsive UI engineering.
           </p>
 
           <div class="terminal-box text-start mb-4">
@@ -189,7 +191,8 @@
             <div class="text-white">// Current Stack</div>
             <div class="text-white"><span class="text-gradient">&gt;</span> PHP, Laravel, Java, Spring Boot</div>
             <div class="text-white"><span class="text-gradient">&gt;</span> Vue 3, Angular, React</div>
-            <div class="text-white"><span class="text-gradient">&gt;</span> Docker, Grafana, MySQL, Redis, MongoDB, PostgreSQL</div>
+            <div class="text-white"><span class="text-gradient">&gt;</span> Docker, Grafana, MySQL, Redis, MongoDB,
+              PostgreSQL</div>
           </div>
 
           <div class="d-flex justify-content-center gap-2 mb-4">
@@ -214,8 +217,10 @@
           <h1 class="display-6 fw-bold text-white mb-3">Architecting resilient backend platforms & engaging user
             interfaces.</h1>
           <p class="text-white leading-relaxed">
-            Software & DevOps Engineer with 6+ years of enterprise experience engineering SLA-backed web applications across.
-            Hands-on expertise in PHP, Laravel, Angular, Java, and database optimization, Frontend, Backend development, and DevOps practices,
+            Software & DevOps Engineer with 6+ years of enterprise experience engineering SLA-backed web applications
+            across.
+            Hands-on expertise in PHP, Laravel, Angular, Java, and database optimization, Frontend, Backend development,
+            and DevOps practices,
             with a current focus on exploring event-driven microservices architectures across multiple language runtimes
             (RabbitMQ, Redis, Spring Boot, .NET Core).
           </p>
@@ -299,7 +304,7 @@
                   <span class="badge-tech">MongoDB</span>
                   <span class="badge-tech">SSH</span>
                 </div>
-              </div>                                                                      
+              </div>
             </div>
           </div>
         </section>
@@ -309,7 +314,217 @@
           <h2 class="section-title text-white">Side Projects: Featured Architecture & Apps</h2>
 
           <div class="d-flex flex-column gap-4">
+            <!-- AgrimartAPI Project Card -->
+            <div
+              class="tech-card p-4 border-start border-4 border-success mb-4 bg-dark text-light rounded-end shadow-sm">
 
+              <!-- Header & Status Badges -->
+              <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
+                <div>
+                  <span class="font-mono text-success small fw-bold">// BACKEND & DATA PIPELINE</span>
+                  <h3 class="h4 text-white font-mono mb-0 mt-1">🌿 AgrimartAPI</h3>
+                </div>
+                <div class="d-flex gap-2 flex-wrap">
+                  <span class="badge bg-dark text-success border border-success font-mono">Laravel 11</span>
+                  <span class="badge bg-dark text-warning border border-warning font-mono">PHP 8.2</span>
+                  <span class="badge bg-dark text-info border border-info font-mono">OpenAPI / Swagger</span>
+                  <span class="badge bg-dark text-primary border border-primary font-mono">Docker</span>
+                </div>
+              </div>
+
+              <p class="text-secondary small mb-4">
+                A high-performance product catalog and web scraping engine built on Laravel 11 and PHP 8.2 Apache.
+                Automates product extraction, metadata normalization, and media assets ingestion across agricultural,
+                hydroponic, and gardening supplier e-commerce platforms—exposing the catalog via a secure, documented
+                RESTful API.
+              </p>
+
+              <!-- Architecture Overview & Key Capabilities -->
+              <div class="mb-4">
+                <h5 class="text-white font-mono small mb-2"><i class="fas fa-network-wired text-success me-2"></i>Core
+                  Engine Architecture</h5>
+                <p class="text-secondary small mb-3">
+                  Operates within a dedicated Docker bridge network (<code
+                    class="text-success font-mono">scraper-network</code>). Runs automated background scraping commands,
+                  normalizes supplier data models into Eloquent schemas, and serves token-authenticated JSON endpoints.
+                </p>
+              </div>
+
+              <!-- Service Directory Table -->
+              <div class="mb-4">
+                <h5 class="text-white font-mono small mb-3">
+                  <i class="fas fa-list-check text-warning me-2"></i>Service Directory
+                </h5>
+                <div class="table-responsive">
+                  <table class="table table-dark table-hover border border-secondary font-mono small align-middle mb-0">
+                    <thead class="table-active text-success">
+                      <tr>
+                        <th>Service Component</th>
+                        <th>Role / Functionality</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-white fw-bold"><i class="fab fa-laravel text-danger me-1"></i> Laravel 11 App
+                        </td>
+                        <td class="text-white">API Core Engine & Web Scraping Controller (PHP 8.2 Apache)</td>
+                      </tr>
+                      <tr>
+                        <td class="text-white fw-bold"><i class="fas fa-spider text-warning me-1"></i> Scraper Engine
+                        </td>
+                        <td class="text-white">Guzzle HTTP & Symfony DomCrawler Ingestion Workers</td>
+                      </tr>
+                      <tr>
+                        <td class="text-white fw-bold"><i class="fas fa-database text-primary me-1"></i> MySQL 8 DB
+                        </td>
+                        <td class="text-white">Relational Data Store for Normalized Catalog & Taxonomy</td>
+                      </tr>
+                      <tr>
+                        <td class="text-white fw-bold"><i class="fas fa-shield-halved text-info me-1"></i> Sanctum
+                          Auth</td>
+                        <td class="text-white">Bearer Token Guard for Protected API Endpoints</td>
+                      </tr>
+                      <tr>
+                        <td class="text-white fw-bold"><i class="fas fa-book text-success me-1"></i> L5-Swagger UI
+                        </td>
+                        <td class="text-white">Interactive OpenAPI 3.0 API Documentation Dashboard</td>
+                      </tr>
+                      <tr>
+                        <td class="text-white fw-bold"><i class="fas fa-tools text-secondary me-1"></i> phpMyAdmin
+                        </td>
+                        <td class="text-white">Web-Based Database Management Dashboard</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- Tech Badges & CTA Footer -->
+                <div
+                  class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-3 border-top border-dark">
+                  <div class="d-flex flex-wrap gap-1">
+                    <span class="badge bg-secondary text-light font-mono">PHP 8.2</span>
+                    <span class="badge bg-secondary text-light font-mono">Laravel 11</span>
+                    <span class="badge bg-secondary text-light font-mono">Guzzle HTTP</span>
+                    <span class="badge bg-secondary text-light font-mono">DomCrawler</span>
+                    <span class="badge bg-secondary text-light font-mono">MySQL 8</span>
+                    <span class="badge bg-secondary text-light font-mono">Laravel Sanctum</span>
+                    <span class="badge bg-secondary text-light font-mono">Swagger / OpenAPI</span>
+                  </div>
+                  <!-- Access Action Buttons -->
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-dark text-warning border border-warning font-mono d-none d-sm-inline-block">
+                      <i class="fas fa-lock me-1"></i> Private Repo
+                    </span>
+
+                    <!-- Button inside Project Card Footer -->
+                    <button type="button" class="btn btn-outline-success btn-sm font-mono" data-bs-toggle="modal"
+                      data-bs-target="#accessModalAgrimart">
+                      <i class="fas fa-key me-1"></i> Request Access
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tech-card p-4 border-start border-4 border-info mb-4">
+
+              <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
+                <div>
+                  <span class="font-mono text-gradient small fw-bold">// FULL-STACK MONOLITH</span>
+                  <h3 class="h4 text-white font-mono mb-0">🚀 WISgeek Task Manager Monolith</h3>
+                </div>
+                <div class="d-flex gap-2">
+                  <span class="badge bg-dark text-info border border-info font-mono">Spring MVC</span>
+                  <span class="badge bg-dark text-success border border-success font-mono">Docker</span>
+                  <span class="badge bg-dark text-warning border border-warning font-mono">PLG Stack</span>
+                </div>
+              </div>
+
+              <p class="text-white small mb-4">
+                A robust, containerized Full-Stack Java Web Application built using Spring MVC, Servlets, and JSP.
+                Bundles the complete application runtime, persistent PostgreSQL storage, and an integrated PLG
+                (Promtail, Loki, Grafana) Observability Stack for real-time log analytics.
+              </p>
+
+              <div class="mb-4">
+                <h5 class="text-white font-mono small mb-2"><i
+                    class="fas fa-network-wired text-info me-2"></i>Monolithic Architecture Blueprint</h5>
+                <p class="text-white small mb-3">
+                  Operates inside an isolated Docker bridge network (<code
+                    class="text-info font-mono">wisgeek-network</code>). The JSP view layer is rendered directly by the
+                  embedded Tomcat engine inside the Spring controller context.
+                </p>
+              </div>
+
+              <div class="mb-4">
+                <h5 class="text-white font-mono small mb-3"><i class="fas fa-list-check text-warning me-2"></i>Service
+                  Directory</h5>
+                <div class="table-responsive">
+                  <table
+                    class="table table-dark table-hover border border-secondary font-mono extra-small align-middle mb-0">
+                    <thead class="table-active text-info">
+                      <tr>
+                        <th>Service Component</th>
+                        <th>Role / Functionality</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-white fw-bold"><i class="fab fa-java text-warning me-1"></i> Spring MVC App</td>
+                        <td class="text-white">Full-Stack App Layer (Tomcat Engine)</td>
+                      </tr>
+                      <tr>
+                        <td class="text-white fw-bold"><i class="fas fa-database text-primary me-1"></i> PostgreSQL DB
+                        </td>
+                        <td class="text-white">Relational Storage Engine</td>
+                      </tr>
+                      <tr>
+                        <td class="text-white fw-bold"><i class="fas fa-table text-info me-1"></i> Adminer DB Client
+                        </td>
+                        <td class="text-white">Web Dashboard for DB Management</td>
+                      </tr>
+                      <tr>
+                        <td class="text-white fw-bold"><i class="fas fa-chart-pie text-purple me-1"></i> Grafana
+                          Dashboard</td>
+                        <td class="text-white">UI Data Analytics & Log Panel</td>
+                      </tr>
+                      <tr>
+                        <td class="text-white fw-bold"><i class="fas fa-spider text-danger me-1"></i> Promtail Agent
+                        </td>
+                        <td class="text-white">Live Log Scraper Target Engine</td>
+                      </tr>
+                      <tr>
+                        <td class="text-white fw-bold"><i class="fas fa-stream text-success me-1"></i> Grafana Loki</td>
+                        <td class="text-white">High-performance Log Aggregator DB</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div
+                class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-2 border-top border-dark">
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge-tech">Java / Servlets</span>
+                  <span class="badge-tech">Spring MVC</span>
+                  <span class="badge-tech">PostgreSQL</span>
+                  <span class="badge-tech">Docker Compose</span>
+                  <span class="badge-tech">Promtail</span>
+                  <span class="badge-tech">Loki</span>
+                  <span class="badge-tech">Grafana</span>
+                </div>
+                <!-- Access Action Buttons -->
+                <div class="d-flex align-items-center gap-2">
+                  <span class="badge bg-dark text-warning border border-warning font-mono d-none d-sm-inline-block">
+                    <i class="fas fa-lock me-1"></i> Public Repo
+                  </span>
+
+                  <a href="mailto:wisani.maluleke@example.com?subject=Codebase%20Access%20Request%3A%20AgrimartAPI&body=Hi%20Wisani%2C%0A%0AI%20would%20like%20to%20request%20collaborator%20access%20to%20view%20the%20AgrimartAPI%20repository.%0A%0AMy%20GitHub%20Username%3A%20"
+                    class="btn btn-outline-success btn-sm font-mono">
+                    <i class="fas fa-key me-1"></i> View Code
+                  </a>
+                </div>
+              </div>
+
+            </div>
             <div class="tech-card p-4 position-relative border-start border-4 border-info">
               <div class="d-flex justify-content-between align-items-start mb-2">
                 <h3 class="h4 text-white font-mono mb-0">Currently Working on: BeastStack Platform</h3>
@@ -381,6 +596,46 @@
                 class="btn btn-outline-light btn-sm font-mono"><i class="fab fa-github me-1"></i> View Code</a>
             </div>
 
+          </div>
+
+          <!-- Modal Container -->
+          <div class="modal fade" id="accessModalAgrimart" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content bg-dark text-light border border-secondary font-mono">
+                <div class="modal-header border-secondary">
+                  <h5 class="modal-title h6 text-success"><i class="fas fa-lock me-2"></i>Request Codebase Access:
+                    AgrimartAPI</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                  <div class="modal-body small">
+                    <p class="text-secondary">This repository is private. Submit your details below to receive a GitHub
+                      collaborator invitation.</p>
+
+                    <div class="mb-3">
+                      <label for="githubUsername" class="form-label text-white">GitHub Username *</label>
+                      <input type="text" name="github_username"
+                        class="form-control bg-black text-light border-secondary small" id="githubUsername"
+                        placeholder="e.g. octocat" required>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="visitorEmail" class="form-label text-white">Your Work Email *</label>
+                      <input type="email" name="email" class="form-control bg-black text-light border-secondary small"
+                        id="visitorEmail" placeholder="name@company.com" required>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                      data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-sm btn-success">Send Request</button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </section>
         <!-- Professional Timeline / Experience -->
@@ -500,7 +755,8 @@
             <span class="font-mono text-gradient small">// CONNECT</span>
             <h2 class="h3 text-white font-mono mb-3">Let's build something great</h2>
             <p class="text-white small mb-4">
-              Have a web application, website and mobile application POC, or contract project you need delivered? Send a
+              Have a web application, RESTful API, API integration, basic website and mobile application POC, or
+              contract project you need delivered? Send a
               direct message.
             </p>
 
