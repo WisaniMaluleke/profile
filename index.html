@@ -40,7 +40,6 @@
       overflow-x: hidden;
     }
 
-    /* Custom Tech Typography & Accents */
     .font-mono {
       font-family: var(--font-mono);
     }
@@ -51,7 +50,6 @@
       -webkit-text-fill-color: transparent;
     }
 
-    /* Modern Glassmorphic Header & Sidebar */
     .tech-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
@@ -75,7 +73,6 @@
       border-radius: 6px;
     }
 
-    /* Terminal Code Header Simulation */
     .terminal-box {
       background: #030712;
       border: 1px solid var(--border-color);
@@ -122,7 +119,6 @@
       color: #fff;
     }
 
-    /* Status Indicator */
     .status-ping {
       display: inline-block;
       width: 8px;
@@ -131,6 +127,34 @@
       background-color: var(--accent-green);
       box-shadow: 0 0 8px var(--accent-green);
       margin-right: 6px;
+    }
+
+    /* Collapsible "details" toggle used to keep dense tables out of the default view */
+    .details-toggle {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--accent-cyan);
+      background: transparent;
+      border: 1px dashed rgba(6, 182, 212, 0.4);
+      border-radius: 6px;
+      padding: 0.35rem 0.75rem;
+    }
+
+    .details-toggle:hover {
+      background: rgba(6, 182, 212, 0.08);
+      color: var(--accent-cyan);
+    }
+
+    .details-toggle .bi {
+      transition: transform 0.2s ease;
+    }
+
+    .details-toggle[aria-expanded="true"] .bi {
+      transform: rotate(180deg);
+    }
+
+    .extra-small {
+      font-size: 0.72rem;
     }
   </style>
 </head>
@@ -151,8 +175,9 @@
         <ul class="navbar-nav ms-auto font-mono small">
           <li class="nav-item"><a class="nav-link text-white me-3" href="#about">// About</a></li>
           <li class="nav-item"><a class="nav-link text-white me-3" href="#skills">// Skills</a></li>
-          <li class="nav-item"><a class="nav-link text-white me-3" href="#projects">// Projects</a></li>
           <li class="nav-item"><a class="nav-link text-white me-3" href="#experience">// Experience</a></li>
+          <li class="nav-item"><a class="nav-link text-white me-3" href="#projects">// Projects</a></li>
+          <li class="nav-item"><a class="nav-link text-white me-3" href="#education">// Education</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#contact">// Contact</a></li>
         </ul>
       </div>
@@ -178,7 +203,7 @@
           <p class="font-mono text-white small mb-3">Software & DevOps Engineer</p>
 
           <p class="small text-white mb-4">
-            Specializing in high-availability full-stack Web and Desktop systems, Linux server administration, and
+            Specializing in high-availability full-stack web and desktop systems, Linux server administration, and
             responsive UI engineering.
           </p>
 
@@ -212,17 +237,16 @@
 
       <div class="col-lg-8">
 
+        <!-- ABOUT -->
         <section id="about" class="mb-5">
           <span class="font-mono text-gradient small font-weight-bold">// OVERVIEW</span>
           <h1 class="display-6 fw-bold text-white mb-3">Architecting resilient backend platforms & engaging user
             interfaces.</h1>
           <p class="text-white leading-relaxed">
-            Software & DevOps Engineer with 6+ years of enterprise experience engineering SLA-backed web applications
-            across.
-            Hands-on expertise in PHP, Laravel, Angular, Java, and database optimization, Frontend, Backend development,
-            and DevOps practices,
-            with a current focus on exploring event-driven microservices architectures across multiple language runtimes
-            (RabbitMQ, Redis, Spring Boot, .NET Core).
+            Software & DevOps Engineer with 6+ years of enterprise experience engineering SLA-backed web
+            applications. Hands-on expertise across PHP, Laravel, Angular, and Java, with a current focus on
+            event-driven microservices spanning multiple language runtimes (RabbitMQ, Redis, Spring Boot, .NET
+            Core).
           </p>
 
           <div class="row g-3 mt-2">
@@ -247,6 +271,7 @@
           </div>
         </section>
 
+        <!-- SKILLS -->
         <section id="skills" class="mb-5">
           <span class="font-mono text-gradient small">// CAPABILITIES</span>
           <h2 class="section-title text-white">Skills & Technologies</h2>
@@ -268,8 +293,8 @@
 
             <div class="col-md-6">
               <div class="tech-card p-4 h-100">
-                <h5 class="text-white font-mono mb-3"><i class="fas fa-server text-warning me-2"></i> Backend & Queues
-                </h5>
+                <h5 class="text-white font-mono mb-3"><i class="fas fa-server text-warning me-2"></i> Backend &
+                  Queues</h5>
                 <div class="d-flex flex-wrap gap-2">
                   <span class="badge-tech">PHP (Laravel)</span>
                   <span class="badge-tech">Java (Spring Boot)</span>
@@ -280,7 +305,8 @@
 
             <div class="col-md-6">
               <div class="tech-card p-4 h-100">
-                <h5 class="text-white font-mono mb-3"><i class="fas fa-cubes text-success me-2"></i> DevOps & Cloud</h5>
+                <h5 class="text-white font-mono mb-3"><i class="fas fa-cubes text-success me-2"></i> DevOps & Cloud
+                </h5>
                 <div class="d-flex flex-wrap gap-2">
                   <span class="badge-tech">Docker / Compose</span>
                   <span class="badge-tech">Linux (VPS/Ubuntu)</span>
@@ -293,8 +319,8 @@
 
             <div class="col-md-6">
               <div class="tech-card p-4 h-100">
-                <h5 class="text-white font-mono mb-3"><i class="fas fa-database text-danger me-2"></i> Databases & Tools
-                </h5>
+                <h5 class="text-white font-mono mb-3"><i class="fas fa-database text-danger me-2"></i> Databases &
+                  Tools</h5>
                 <div class="d-flex flex-wrap gap-2">
                   <span class="badge-tech">MySQL / MariaDB</span>
                   <span class="badge-tech">Git / Bitbucket</span>
@@ -309,16 +335,183 @@
           </div>
         </section>
 
+        <!-- EXPERIENCE (moved ahead of Projects — hiring managers scan career history first) -->
+        <section id="experience" class="mb-5">
+          <span class="font-mono text-gradient small font-weight-bold">// CAREER PATH</span>
+          <h2 class="section-title text-white">Professional Experience</h2>
+
+          <div class="border-start border-secondary ms-2 ps-4 d-flex flex-column gap-5">
+
+            <!-- IQBusiness -->
+            <div class="position-relative">
+              <i class="fas fa-circle text-info position-absolute"
+                style="left: -31px; top: 4px; font-size: 0.75rem;"></i>
+              <div class="d-flex justify-content-between align-items-start flex-wrap mb-1">
+                <h3 class="h4 text-white font-mono mb-0">IQBusiness</h3>
+                <span class="badge bg-dark text-info border border-info font-mono">Jan 2020 – Present</span>
+              </div>
+              <div class="text-gradient font-mono small mb-3">Intermediate Software Developer · Full-time | South
+                Africa</div>
+
+              <ul class="text-white small ps-3 mb-3 d-flex flex-column gap-2">
+                <li>Architect and maintain high-performance full-stack web solutions under strict Service Level
+                  Agreements, consistently meeting alignment targets across cross-functional business units.</li>
+                <li>Collaborate within mature Agile teams alongside Business Analysts and QA engineers to groom user
+                  stories, estimate sprint efforts, and run technical demos for stakeholders.</li>
+                <li>Enhance code reliability, security, and maintainability by enforcing strict static analysis
+                  testing.</li>
+                <li>Manage, optimize, and migrate production MySQL databases using Laravel Artisan and MySQL
+                  Workbench to eliminate query bottlenecks.</li>
+                <li>Maintain staging servers on Linux via SSH, configuring firewalls and scripting deployment
+                  processes.</li>
+                <li>Upskilled and mentored two junior developers on DevTools, debugging strategies, and Git
+                  collaboration.</li>
+              </ul>
+
+              <div class="d-flex flex-wrap gap-1">
+                <span class="badge-tech">Laravel</span>
+                <span class="badge-tech">JavaScript</span>
+                <span class="badge-tech">MySQL</span>
+                <span class="badge-tech">Linux / SSH</span>
+                <span class="badge-tech">Static Analysis</span>
+                <span class="badge-tech">Agile / Scrum</span>
+                <span class="badge-tech">Mentorship</span>
+              </div>
+            </div>
+
+            <!-- Redivision Consulting Group -->
+            <div class="position-relative">
+              <i class="fas fa-circle text-purple position-absolute"
+                style="left: -31px; top: 4px; font-size: 0.75rem; color: var(--accent-purple);"></i>
+              <div class="d-flex justify-content-between align-items-start flex-wrap mb-1">
+                <h3 class="h4 text-white font-mono mb-0">Redivision Consulting Group</h3>
+                <span class="badge bg-dark text-white border border-secondary font-mono">Aug 2018 – Dec 2019</span>
+              </div>
+              <div class="text-white font-mono small mb-3">Full Stack Software Developer | Johannesburg, South
+                Africa</div>
+
+              <ul class="text-white small ps-3 mb-3 d-flex flex-column gap-2">
+                <li><strong>Procurement System (Laravel):</strong> Owned the full development lifecycle from
+                  architectural design and database modeling to deployment, implementing RBAC middleware, dynamic
+                  PDF reporting, and real-time notifications.</li>
+                <li><strong>Accommodation Booking System:</strong> Refactored an existing application to
+                  significantly improve response times, integrated the PayFast payment gateway, and established
+                  isolated staging environments.</li>
+                <li><strong>Vehicle Finance Application:</strong> Developed secure Laravel RESTful APIs feeding a
+                  companion Android application.</li>
+              </ul>
+
+              <div class="d-flex flex-wrap gap-1">
+                <span class="badge-tech">Laravel</span>
+                <span class="badge-tech">PayFast Integration</span>
+                <span class="badge-tech">RESTful APIs</span>
+                <span class="badge-tech">RBAC</span>
+                <span class="badge-tech">MySQL</span>
+              </div>
+            </div>
+
+            <!-- MPANDE TECHNOLOGIES -->
+            <div class="position-relative">
+              <i class="fas fa-circle text-white position-absolute"
+                style="left: -31px; top: 4px; font-size: 0.75rem;"></i>
+              <div class="d-flex justify-content-between align-items-start flex-wrap mb-1">
+                <h3 class="h4 text-white font-mono mb-0">MPANDE TECHNOLOGIES</h3>
+                <span class="badge bg-dark text-white border border-secondary font-mono">Sep 2017 – Aug 2018</span>
+              </div>
+              <div class="text-white font-mono small mb-3">Software Developer (Client: Ulwembu Business Services) ·
+                Internship | Johannesburg</div>
+
+              <ul class="text-white small ps-3 mb-3 d-flex flex-column gap-2">
+                <li><strong>Fingerprint Biometrics & Health System:</strong> Built a Java desktop application
+                  (Swing/AWT) interfacing with biometric hardware scanners for high-speed patient registration and
+                  search, integrated with cloud APIs for real-time verification across public health clinics.</li>
+                <li><strong>Asset Management System:</strong> Tracked corporate hardware infrastructure and
+                  shipped optimizations to the core company website.</li>
+              </ul>
+
+              <div class="d-flex flex-wrap gap-1">
+                <span class="badge-tech">Java (Swing/AWT)</span>
+                <span class="badge-tech">Biometric Hardware SDK</span>
+                <span class="badge-tech">REST API Integration</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- EDUCATION (now its own proper section, linked from nav) -->
+        <section id="education" class="mb-5">
+          <span class="font-mono text-gradient small font-weight-bold">// BACKGROUND</span>
+          <h2 class="section-title text-white">Education</h2>
+
+          <div class="card bg-dark border-secondary text-light font-mono">
+            <div class="card-body">
+              <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                <h5 class="card-title text-success mb-0">
+                  <i class="fas fa-graduation-cap me-2"></i>Diploma in Information Technology
+                </h5>
+                <span class="badge bg-secondary">Jan 2013 – Dec 2017</span>
+              </div>
+              <h6 class="text-warning mb-3">Tshwane University of Technology</h6>
+
+              <button class="details-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#eduDetails"
+                aria-expanded="false" aria-controls="eduDetails">
+                Show coursework <i class="bi bi-chevron-down ms-1"></i>
+              </button>
+
+              <div class="collapse mt-3" id="eduDetails">
+                <div class="row g-3 small">
+                  <div class="col-md-4">
+                    <div class="p-2 border border-secondary rounded bg-black">
+                      <span class="text-info fw-bold d-block mb-1"><i class="fas fa-cubes me-1"></i> Software
+                        Architecture</span>
+                      <ul class="list-unstyled mb-0 text-secondary extra-small">
+                        <li>• Object-Oriented Programming (OOP)</li>
+                        <li>• Data Structures & Algorithms</li>
+                        <li>• Systems Analysis & Design</li>
+                        <li>• Software Engineering & PM</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="p-2 border border-secondary rounded bg-black">
+                      <span class="text-info fw-bold d-block mb-1"><i class="fas fa-code me-1"></i> Development
+                        Stack</span>
+                      <ul class="list-unstyled mb-0 text-secondary extra-small">
+                        <li>• Java Programming</li>
+                        <li>• Web Development</li>
+                        <li>• Mobile Application Dev</li>
+                        <li>• Software Testing & QA</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="p-2 border border-secondary rounded bg-black">
+                      <span class="text-info fw-bold d-block mb-1"><i class="fas fa-server me-1"></i>
+                        Infrastructure Foundations</span>
+                      <ul class="list-unstyled mb-0 text-secondary extra-small">
+                        <li>• Database Design & SQL</li>
+                        <li>• Computer Networks</li>
+                        <li>• Operating Systems</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROJECTS -->
         <section id="projects" class="mb-5">
           <span class="font-mono text-gradient small">// PORTFOLIO</span>
-          <h2 class="section-title text-white">Side Projects: Featured Architecture & Apps</h2>
+          <h2 class="section-title text-white">Featured Architecture & Apps</h2>
 
           <div class="d-flex flex-column gap-4">
-            <!-- AgrimartAPI Project Card -->
-            <div
-              class="tech-card p-4 border-start border-4 border-success mb-4 bg-dark text-light rounded-end shadow-sm">
 
-              <!-- Header & Status Badges -->
+            <!-- AgrimartAPI Project Card -->
+            <div class="tech-card p-4 border-start border-4 border-success bg-dark text-light rounded-end">
+
               <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
                 <div>
                   <span class="font-mono text-success small fw-bold">// BACKEND & DATA PIPELINE</span>
@@ -327,34 +520,28 @@
                 <div class="d-flex gap-2 flex-wrap">
                   <span class="badge bg-dark text-success border border-success font-mono">Laravel 11</span>
                   <span class="badge bg-dark text-warning border border-warning font-mono">PHP 8.2</span>
-                  <span class="badge bg-dark text-info border border-info font-mono">OpenAPI / Swagger</span>
+                  <span class="badge bg-dark text-info border border-info font-mono">Swagger</span>
                   <span class="badge bg-dark text-primary border border-primary font-mono">Docker</span>
                 </div>
               </div>
 
-              <p class="text-secondary small mb-4">
-                A high-performance product catalog and web scraping engine built on Laravel 11 and PHP 8.2 Apache.
-                Automates product extraction, metadata normalization, and media assets ingestion across agricultural,
-                hydroponic, and gardening supplier e-commerce platforms—exposing the catalog via a secure, documented
-                RESTful API.
+              <p class="text-secondary small mb-3">
+                A high-performance product catalog and web scraping engine. Automates product extraction,
+                metadata normalization, and media ingestion across agricultural and gardening supplier
+                e-commerce platforms — exposing the catalog via a secure, documented RESTful API.
               </p>
 
-              <!-- Architecture Overview & Key Capabilities -->
-              <div class="mb-4">
-                <h5 class="text-white font-mono small mb-2"><i class="fas fa-network-wired text-success me-2"></i>Core
-                  Engine Architecture</h5>
-                <p class="text-secondary small mb-3">
-                  Operates within a dedicated Docker bridge network (<code
-                    class="text-success font-mono">scraper-network</code>). Runs automated background scraping commands,
-                  normalizes supplier data models into Eloquent schemas, and serves token-authenticated JSON endpoints.
-                </p>
-              </div>
+              <button class="details-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#agrimartDetails"
+                aria-expanded="false" aria-controls="agrimartDetails">
+                Architecture & service breakdown <i class="bi bi-chevron-down ms-1"></i>
+              </button>
 
-              <!-- Service Directory Table -->
-              <div class="mb-4">
-                <h5 class="text-white font-mono small mb-3">
-                  <i class="fas fa-list-check text-warning me-2"></i>Service Directory
-                </h5>
+              <div class="collapse mt-3" id="agrimartDetails">
+                <p class="text-secondary small mb-3">
+                  Runs inside a dedicated Docker bridge network (<code
+                    class="text-success font-mono">scraper-network</code>): automated background scraping jobs
+                  normalize supplier data into Eloquent schemas and serve token-authenticated JSON endpoints.
+                </p>
                 <div class="table-responsive">
                   <table class="table table-dark table-hover border border-secondary font-mono small align-middle mb-0">
                     <thead class="table-active text-success">
@@ -365,66 +552,54 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="text-white fw-bold"><i class="fab fa-laravel text-danger me-1"></i> Laravel 11 App
-                        </td>
-                        <td class="text-white">API Core Engine & Web Scraping Controller (PHP 8.2 Apache)</td>
+                        <td class="text-white fw-bold"><i class="fab fa-laravel text-danger me-1"></i> Laravel 11
+                          App</td>
+                        <td class="text-white">API core engine & scraping controller (PHP 8.2 Apache)</td>
                       </tr>
                       <tr>
-                        <td class="text-white fw-bold"><i class="fas fa-spider text-warning me-1"></i> Scraper Engine
-                        </td>
-                        <td class="text-white">Guzzle HTTP & Symfony DomCrawler Ingestion Workers</td>
+                        <td class="text-white fw-bold"><i class="fas fa-spider text-warning me-1"></i> Scraper
+                          Engine</td>
+                        <td class="text-white">Guzzle HTTP & Symfony DomCrawler ingestion workers</td>
                       </tr>
                       <tr>
-                        <td class="text-white fw-bold"><i class="fas fa-database text-primary me-1"></i> MySQL 8 DB
-                        </td>
-                        <td class="text-white">Relational Data Store for Normalized Catalog & Taxonomy</td>
+                        <td class="text-white fw-bold"><i class="fas fa-database text-primary me-1"></i> MySQL 8
+                          DB</td>
+                        <td class="text-white">Relational store for normalized catalog & taxonomy</td>
                       </tr>
                       <tr>
-                        <td class="text-white fw-bold"><i class="fas fa-shield-halved text-info me-1"></i> Sanctum
-                          Auth</td>
-                        <td class="text-white">Bearer Token Guard for Protected API Endpoints</td>
+                        <td class="text-white fw-bold"><i class="fas fa-shield-halved text-info me-1"></i>
+                          Sanctum Auth</td>
+                        <td class="text-white">Bearer token guard for protected API endpoints</td>
                       </tr>
                       <tr>
-                        <td class="text-white fw-bold"><i class="fas fa-book text-success me-1"></i> L5-Swagger UI
-                        </td>
-                        <td class="text-white">Interactive OpenAPI 3.0 API Documentation Dashboard</td>
+                        <td class="text-white fw-bold"><i class="fas fa-book text-success me-1"></i> L5-Swagger
+                          UI</td>
+                        <td class="text-white">Interactive OpenAPI 3.0 documentation dashboard</td>
                       </tr>
                       <tr>
-                        <td class="text-white fw-bold"><i class="fas fa-tools text-secondary me-1"></i> phpMyAdmin
-                        </td>
-                        <td class="text-white">Web-Based Database Management Dashboard</td>
+                        <td class="text-white fw-bold"><i class="fas fa-tools text-secondary me-1"></i>
+                          phpMyAdmin</td>
+                        <td class="text-white">Web-based database management dashboard</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                <!-- Tech Badges & CTA Footer -->
-                <div
-                  class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-3 border-top border-dark">
-                  <div class="d-flex flex-wrap gap-1">
-                    <span class="badge bg-secondary text-light font-mono">PHP 8.2</span>
-                    <span class="badge bg-secondary text-light font-mono">Laravel 11</span>
-                    <span class="badge bg-secondary text-light font-mono">Guzzle HTTP</span>
-                    <span class="badge bg-secondary text-light font-mono">DomCrawler</span>
-                    <span class="badge bg-secondary text-light font-mono">MySQL 8</span>
-                    <span class="badge bg-secondary text-light font-mono">Laravel Sanctum</span>
-                    <span class="badge bg-secondary text-light font-mono">Swagger / OpenAPI</span>
-                  </div>
-                  <!-- Access Action Buttons -->
-                  <div class="d-flex align-items-center gap-2">
-                    <span class="badge bg-dark text-warning border border-warning font-mono d-none d-sm-inline-block">
-                      <i class="fas fa-lock me-1"></i> Private Repo
-                    </span>
+              </div>
 
-                    <!-- Button inside Project Card Footer -->
-                    <button type="button" class="btn btn-outline-success btn-sm font-mono" data-bs-toggle="modal"
-                      data-bs-target="#accessModalAgrimart">
-                      <i class="fas fa-key me-1"></i> Request Access
-                    </button>
-                  </div>
-                </div>
+              <div
+                class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-3 mt-3 border-top border-dark">
+                <span class="badge bg-dark text-warning border border-warning font-mono">
+                  <i class="fas fa-lock me-1"></i> Private Repo
+                </span>
+                <button type="button" class="btn btn-outline-success btn-sm font-mono" data-bs-toggle="modal"
+                  data-bs-target="#accessModalAgrimart">
+                  <i class="fas fa-key me-1"></i> Request Access
+                </button>
               </div>
             </div>
-            <div class="tech-card p-4 border-start border-4 border-info mb-4">
+
+            <!-- WISgeek Project Card -->
+            <div class="tech-card p-4 border-start border-4 border-info">
 
               <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
                 <div>
@@ -438,25 +613,23 @@
                 </div>
               </div>
 
-              <p class="text-white small mb-4">
-                A robust, containerized Full-Stack Java Web Application built using Spring MVC, Servlets, and JSP.
-                Bundles the complete application runtime, persistent PostgreSQL storage, and an integrated PLG
-                (Promtail, Loki, Grafana) Observability Stack for real-time log analytics.
+              <p class="text-white small mb-3">
+                A robust, containerized full-stack Java web application built with Spring MVC, Servlets, and JSP.
+                Bundles persistent PostgreSQL storage and an integrated PLG (Promtail, Loki, Grafana)
+                observability stack for real-time log analytics.
               </p>
 
-              <div class="mb-4">
-                <h5 class="text-white font-mono small mb-2"><i
-                    class="fas fa-network-wired text-info me-2"></i>Monolithic Architecture Blueprint</h5>
-                <p class="text-white small mb-3">
-                  Operates inside an isolated Docker bridge network (<code
-                    class="text-info font-mono">wisgeek-network</code>). The JSP view layer is rendered directly by the
-                  embedded Tomcat engine inside the Spring controller context.
-                </p>
-              </div>
+              <button class="details-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#wisgeekDetails"
+                aria-expanded="false" aria-controls="wisgeekDetails">
+                Architecture & service breakdown <i class="bi bi-chevron-down ms-1"></i>
+              </button>
 
-              <div class="mb-4">
-                <h5 class="text-white font-mono small mb-3"><i class="fas fa-list-check text-warning me-2"></i>Service
-                  Directory</h5>
+              <div class="collapse mt-3" id="wisgeekDetails">
+                <p class="text-white small mb-3">
+                  Runs inside an isolated Docker bridge network (<code
+                    class="text-info font-mono">wisgeek-network</code>); the JSP view layer is rendered directly
+                  by the embedded Tomcat engine inside the Spring controller context.
+                </p>
                 <div class="table-responsive">
                   <table
                     class="table table-dark table-hover border border-secondary font-mono extra-small align-middle mb-0">
@@ -468,32 +641,34 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="text-white fw-bold"><i class="fab fa-java text-warning me-1"></i> Spring MVC App</td>
-                        <td class="text-white">Full-Stack App Layer (Tomcat Engine)</td>
+                        <td class="text-white fw-bold"><i class="fab fa-java text-warning me-1"></i> Spring MVC
+                          App</td>
+                        <td class="text-white">Full-stack app layer (Tomcat engine)</td>
                       </tr>
                       <tr>
-                        <td class="text-white fw-bold"><i class="fas fa-database text-primary me-1"></i> PostgreSQL DB
-                        </td>
-                        <td class="text-white">Relational Storage Engine</td>
+                        <td class="text-white fw-bold"><i class="fas fa-database text-primary me-1"></i>
+                          PostgreSQL DB</td>
+                        <td class="text-white">Relational storage engine</td>
                       </tr>
                       <tr>
-                        <td class="text-white fw-bold"><i class="fas fa-table text-info me-1"></i> Adminer DB Client
-                        </td>
-                        <td class="text-white">Web Dashboard for DB Management</td>
+                        <td class="text-white fw-bold"><i class="fas fa-table text-info me-1"></i> Adminer DB
+                          Client</td>
+                        <td class="text-white">Web dashboard for DB management</td>
                       </tr>
                       <tr>
                         <td class="text-white fw-bold"><i class="fas fa-chart-pie text-purple me-1"></i> Grafana
                           Dashboard</td>
-                        <td class="text-white">UI Data Analytics & Log Panel</td>
+                        <td class="text-white">UI data analytics & log panel</td>
                       </tr>
                       <tr>
-                        <td class="text-white fw-bold"><i class="fas fa-spider text-danger me-1"></i> Promtail Agent
-                        </td>
-                        <td class="text-white">Live Log Scraper Target Engine</td>
+                        <td class="text-white fw-bold"><i class="fas fa-spider text-danger me-1"></i> Promtail
+                          Agent</td>
+                        <td class="text-white">Live log scraper target engine</td>
                       </tr>
                       <tr>
-                        <td class="text-white fw-bold"><i class="fas fa-stream text-success me-1"></i> Grafana Loki</td>
-                        <td class="text-white">High-performance Log Aggregator DB</td>
+                        <td class="text-white fw-bold"><i class="fas fa-stream text-success me-1"></i> Grafana
+                          Loki</td>
+                        <td class="text-white">High-performance log aggregator DB</td>
                       </tr>
                     </tbody>
                   </table>
@@ -501,44 +676,31 @@
               </div>
 
               <div
-                class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-2 border-top border-dark">
-                <div class="d-flex flex-wrap gap-1">
-                  <span class="badge-tech">Java / Servlets</span>
-                  <span class="badge-tech">Spring MVC</span>
-                  <span class="badge-tech">PostgreSQL</span>
-                  <span class="badge-tech">Docker Compose</span>
-                  <span class="badge-tech">Promtail</span>
-                  <span class="badge-tech">Loki</span>
-                  <span class="badge-tech">Grafana</span>
-                </div>
-                <!-- Access Action Buttons -->
-                <div class="d-flex align-items-center gap-2">
-                  <span class="badge bg-dark text-warning border border-warning font-mono d-none d-sm-inline-block">
-                    <i class="fas fa-lock me-1"></i> Public Repo
-                  </span>
-
-                  <a href="mailto:wisani.maluleke@example.com?subject=Codebase%20Access%20Request%3A%20AgrimartAPI&body=Hi%20Wisani%2C%0A%0AI%20would%20like%20to%20request%20collaborator%20access%20to%20view%20the%20AgrimartAPI%20repository.%0A%0AMy%20GitHub%20Username%3A%20"
-                    class="btn btn-outline-success btn-sm font-mono">
-                    <i class="fas fa-key me-1"></i> View Code
-                  </a>
-                </div>
+                class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-3 mt-3 border-top border-dark">
+                <span class="badge bg-dark text-warning border border-warning font-mono">
+                  <i class="fas fa-lock me-1"></i> Public Repo
+                </span>
+                <a href="mailto:wisani.maluleke@example.com?subject=Codebase%20Access%20Request%3A%20AgrimartAPI&body=Hi%20Wisani%2C%0A%0AI%20would%20like%20to%20request%20collaborator%20access%20to%20view%20the%20AgrimartAPI%20repository.%0A%0AMy%20GitHub%20Username%3A%20"
+                  class="btn btn-outline-success btn-sm font-mono">
+                  <i class="fas fa-key me-1"></i> View Code
+                </a>
               </div>
-
             </div>
+
+            <!-- BeastStack -->
             <div class="tech-card p-4 position-relative border-start border-4 border-info">
               <div class="d-flex justify-content-between align-items-start mb-2">
                 <h3 class="h4 text-white font-mono mb-0">Currently Working on: BeastStack Platform</h3>
                 <span class="badge bg-dark text-info border border-info font-mono">Microservices</span>
               </div>
               <p class="text-white small">
-                High-throughput, event-driven polyglot architecture built for asynchronous order processing across five
-                language runtimes.
+                High-throughput, event-driven polyglot architecture for asynchronous order processing across
+                five language runtimes.
               </p>
               <ul class="text-white small ps-3 mb-3">
-                <li>Laravel API Gateway handling high-concurrency request routing and dispatching queue events.</li>
-                <li>RabbitMQ message broker facilitating decoupling across Java, Python, C#, and Node.js microservices.
-                </li>
-                <li>Centralized Redis caching layer for state synchronization and quick database read offloading.</li>
+                <li>Laravel API Gateway handling high-concurrency request routing and queue event dispatch.</li>
+                <li>RabbitMQ message broker decoupling Java, Python, C#, and Node.js microservices.</li>
+                <li>Centralized Redis caching layer for state sync and read offloading.</li>
               </ul>
               <div class="d-flex flex-wrap gap-1 mb-3">
                 <span class="badge-tech">Laravel</span>
@@ -549,21 +711,23 @@
                 <span class="badge-tech">Redis</span>
               </div>
               <a href="https://github.com/WisaniMaluleke" target="_blank"
-                class="btn btn-outline-light btn-sm font-mono"><i class="fab fa-github me-1"></i> Architecture Repo</a>
+                class="btn btn-outline-light btn-sm font-mono"><i class="fab fa-github me-1"></i> Architecture
+                Repo</a>
             </div>
 
+            <!-- Agrimart Platform -->
             <div class="tech-card p-4 border-start border-4 border-purple">
               <div class="d-flex justify-content-between align-items-start mb-2">
                 <h3 class="h4 text-white font-mono mb-0">Agrimart Platform</h3>
                 <span class="badge bg-dark text-warning border border-warning font-mono">E-Commerce</span>
               </div>
               <p class="text-white small">
-                Agricultural marketplace solution built for optimal mobile access and high-scale vendor product display.
+                Agricultural marketplace solution built for optimal mobile access and high-scale vendor product
+                display.
               </p>
               <ul class="text-white small ps-3 mb-3">
-                <li>Engineered scalable Angular components for mobile navigation, headers, and dynamic filtering grids.
-                </li>
-                <li>Integrated client-side state handling for seamless product discovery and catalog queries.</li>
+                <li>Scalable Angular components for mobile navigation, headers, and dynamic filtering grids.</li>
+                <li>Client-side state handling for seamless product discovery and catalog queries.</li>
               </ul>
               <div class="d-flex flex-wrap gap-1 mb-3">
                 <span class="badge-tech">Angular</span>
@@ -575,6 +739,7 @@
                 class="btn btn-outline-light btn-sm font-mono"><i class="fab fa-github me-1"></i> View Code</a>
             </div>
 
+            <!-- Outsource Spani -->
             <div class="tech-card p-4 border-start border-4 border-success">
               <div class="d-flex justify-content-between align-items-start mb-2">
                 <h3 class="h4 text-white font-mono mb-0">Outsource Spani</h3>
@@ -584,8 +749,8 @@
                 Service procurement marketplace enabling verified local skills matching and job bookings.
               </p>
               <ul class="text-white small ps-3 mb-3">
-                <li>Architected robust user authentication modules and route guards in Angular.</li>
-                <li>Migrated key workflows from legacy React components into clean, modular Angular structures.</li>
+                <li>Robust user authentication modules and route guards in Angular.</li>
+                <li>Migrated key workflows from legacy React components into modular Angular structures.</li>
               </ul>
               <div class="d-flex flex-wrap gap-1 mb-3">
                 <span class="badge-tech">Angular</span>
@@ -598,21 +763,21 @@
 
           </div>
 
-          <!-- Modal Container -->
+          <!-- Modal -->
           <div class="modal fade" id="accessModalAgrimart" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content bg-dark text-light border border-secondary font-mono">
                 <div class="modal-header border-secondary">
-                  <h5 class="modal-title h6 text-success"><i class="fas fa-lock me-2"></i>Request Codebase Access:
-                    AgrimartAPI</h5>
+                  <h5 class="modal-title h6 text-success"><i class="fas fa-lock me-2"></i>Request Codebase
+                    Access: AgrimartAPI</h5>
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
                 </div>
 
                 <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                   <div class="modal-body small">
-                    <p class="text-secondary">This repository is private. Submit your details below to receive a GitHub
-                      collaborator invitation.</p>
+                    <p class="text-secondary">This repository is private. Submit your details below to receive a
+                      GitHub collaborator invitation.</p>
 
                     <div class="mb-3">
                       <label for="githubUsername" class="form-label text-white">GitHub Username *</label>
@@ -639,178 +804,14 @@
           </div>
         </section>
 
-
-        <!-- Education Card / Resume Section -->
-<div class="card bg-dark border-secondary text-light font-mono mb-4">
-  <div class="card-body">
-    <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
-      <h5 class="card-title text-success mb-0">
-        <i class="fas fa-graduation-cap me-2"></i>Diploma in Information Technology
-      </h5>
-      <span class="badge bg-secondary">Jan 2013 – Dec 2017</span>
-    </div>
-    <h6 class="text-warning mb-3">Tshwane University of Technology</h6>
-
-    <p class="text-light small mb-2">
-      <strong>Core Academic & Engineering Focus for Technical Applications Specialist:</strong>
-    </p>
-
-    <div class="row g-3 small">
-      <div class="col-md-4">
-        <div class="p-2 border border-secondary rounded bg-black">
-          <span class="text-info fw-bold d-block mb-1"><i class="fas fa-cubes me-1"></i> Software Architecture</span>
-          <ul class="list-unstyled mb-0 text-secondary extra-small">
-            <li>• Object-Oriented Programming (OOP)</li>
-            <li>• Data Structures & Algorithms</li>
-            <li>• Systems Analysis & Design</li>
-            <li>• Software Engineering & PM</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="p-2 border border-secondary rounded bg-black">
-          <span class="text-info fw-bold d-block mb-1"><i class="fas fa-code me-1"></i> Development Stack</span>
-          <ul class="list-unstyled mb-0 text-secondary extra-small">
-            <li>• Java Programming</li>
-            <li>• Web Development</li>
-            <li>• Mobile Application Dev</li>
-            <li>• Software Testing & QA</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="p-2 border border-secondary rounded bg-black">
-          <span class="text-info fw-bold d-block mb-1"><i class="fas fa-server me-1"></i> Infrastructure Foundations</span>
-          <ul class="list-unstyled mb-0 text-secondary extra-small">
-            <li>• Database Design & SQL</li>
-            <li>• Computer Networks</li>
-            <li>• Operating Systems</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-        <!-- Professional Timeline / Experience -->
-        <section id="experience" class="mb-5">
-          <span class="font-mono text-gradient small font-weight-bold">// CAREER PATH</span>
-          <h2 class="section-title text-white">Professional Experience</h2>
-
-          <div class="border-start border-secondary ms-2 ps-4 d-flex flex-column gap-5">
-
-            <!-- IQBusiness -->
-            <div class="position-relative">
-              <i class="fas fa-circle text-info position-absolute"
-                style="left: -31px; top: 4px; font-size: 0.75rem;"></i>
-              <div class="d-flex justify-content-between align-items-start flex-wrap mb-1">
-                <h3 class="h4 text-white font-mono mb-0">IQBusiness</h3>
-                <span class="badge bg-dark text-info border border-info font-mono">Jan 2020 – Present</span>
-              </div>
-              <div class="text-gradient font-mono small mb-3">Intermediate Software Developer · Full-time | South Africa
-              </div>
-
-              <ul class="text-white small ps-3 mb-3 d-flex flex-column gap-2">
-                <li>Architect and maintain high-performance full-stack web solutions under strict Service Level
-                  Agreements (SLAs), consistently meeting alignment targets across cross-functional business units.</li>
-                <li>Collaborate deeply within mature Agile teams alongside Business Analysts and Quality Assurance
-                  engineers to groom user stories, estimate sprint efforts, and run technical feature demonstrations for
-                  stakeholders.</li>
-                <li>Enhance code reliability, security, and maintainability across core products by enforcing strict
-                  static analysis testing.</li>
-                <li>Manage, optimize, and migrate production-level MySQL databases using Laravel Artisan and MySQL
-                  Workbench to eliminate query bottlenecks.</li>
-                <li>Maintain staging servers on Linux via SSH, configuring firewalls, managing system workflows, and
-                  scripting deployment processes.</li>
-                <li>Upskilled and trained two junior software developers, fast-tracking their onboarding process
-                  regarding browser DevTools, debugging strategies, and Git collaboration best practices.</li>
-              </ul>
-
-              <div class="d-flex flex-wrap gap-1">
-                <span class="badge-tech">Laravel</span>
-                <span class="badge-tech">JavaScript</span>
-                <span class="badge-tech">MySQL</span>
-                <span class="badge-tech">Linux / SSH</span>
-                <span class="badge-tech">Static Analysis</span>
-                <span class="badge-tech">Agile / Scrum</span>
-                <span class="badge-tech">Mentorship</span>
-              </div>
-            </div>
-
-            <!-- Redivision Consulting Group -->
-            <div class="position-relative">
-              <i class="fas fa-circle text-purple position-absolute"
-                style="left: -31px; top: 4px; font-size: 0.75rem; color: var(--accent-purple);"></i>
-              <div class="d-flex justify-content-between align-items-start flex-wrap mb-1">
-                <h3 class="h4 text-white font-mono mb-0">Redivision Consulting Group</h3>
-                <span class="badge bg-dark text-white border border-secondary font-mono">Aug 2018 – Dec 2019</span>
-              </div>
-              <div class="text-white font-mono small mb-3">Full Stack Software Developer | Johannesburg, South Africa
-              </div>
-
-              <ul class="text-white small ps-3 mb-3 d-flex flex-column gap-2">
-                <li><strong>Procurement System (Laravel):</strong> Owned full development lifecycle from architectural
-                  design and database modeling to deployment. Implemented RBAC middleware, dynamic PDF reporting using
-                  FPDF, and real-time user notification engines.</li>
-                <li><strong>Accommodation Booking System:</strong> Debugged, refactored, and optimized an existing
-                  application to significantly improve page response times. Integrated PayFast payment gateway for
-                  secure transactions and established isolated testing environments to decouple staging from production.
-                </li>
-                <li><strong>Vehicle Finance Application:</strong> Developed and exposed secure Laravel RESTful APIs to
-                  feed a companion Android application, driving seamless client mobile integration.</li>
-                <li>Delivered high-impact technical demonstrations directly to clients, translating software
-                  capabilities into tangible business value.</li>
-              </ul>
-
-              <div class="d-flex flex-wrap gap-1">
-                <span class="badge-tech">Laravel</span>
-                <span class="badge-tech">PayFast Integration</span>
-                <span class="badge-tech">RESTful APIs</span>
-                <span class="badge-tech">RBAC</span>
-                <span class="badge-tech">FPDF</span>
-                <span class="badge-tech">MySQL</span>
-              </div>
-            </div>
-
-            <!-- MPANDE TECHNOLOGIES -->
-            <div class="position-relative">
-              <i class="fas fa-circle text-white position-absolute"
-                style="left: -31px; top: 4px; font-size: 0.75rem;"></i>
-              <div class="d-flex justify-content-between align-items-start flex-wrap mb-1">
-                <h3 class="h4 text-white font-mono mb-0">MPANDE TECHNOLOGIES</h3>
-                <span class="badge bg-dark text-white border border-secondary font-mono">Sep 2017 – Aug 2018</span>
-              </div>
-              <div class="text-white font-mono small mb-3">Software Developer (Client: Ulwembu Business Services) ·
-                Internship | Johannesburg</div>
-
-              <ul class="text-white small ps-3 mb-3 d-flex flex-column gap-2">
-                <li><strong>Fingerprint Biometrics & Health System:</strong> Researched, designed, and built a custom
-                  Java desktop application (Swing/AWT) interfacing directly with biometric hardware scanners to
-                  facilitate high-speed patient registration and search.</li>
-                <li>Integrated localized biometric desktop engine with secure cloud-based web APIs to enable real-time
-                  verification across multiple public health clinics.</li>
-                <li><strong>Asset Management System:</strong> Administered and tracked corporate hardware infrastructure
-                  assets while introducing optimized components to the core company website.</li>
-              </ul>
-
-              <div class="d-flex flex-wrap gap-1">
-                <span class="badge-tech">Java (Swing/AWT)</span>
-                <span class="badge-tech">Biometric Hardware SDK</span>
-                <span class="badge-tech">REST APIs Integration</span>
-                <span class="badge-tech">Hardware Admin</span>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
+        <!-- CONTACT -->
         <section id="contact" class="mb-5">
           <div class="tech-card p-4 p-md-5">
             <span class="font-mono text-gradient small">// CONNECT</span>
             <h2 class="h3 text-white font-mono mb-3">Let's build something great</h2>
             <p class="text-white small mb-4">
-              Have a web application, RESTful API, API integration, basic website and mobile application POC, or
-              contract project you need delivered? Send a
-              direct message.
+              Have a web application, RESTful API, API integration, POC, or contract project you need delivered?
+              Send a direct message.
             </p>
 
             <form>
